@@ -6,7 +6,7 @@ import Logo from '../assets/images/logo.png'
 const API_URL = 'https://sheet.best/api/sheets/a9ab514d-7010-4004-b4eb-fc9c6dc94c0b'
 
 const Home = () => {
-    const [hasSubmitted, setHasSubmitted] = useSessionStorage('submitted-test-1', false)
+    const [hasSubmitted, setHasSubmitted] = useSessionStorage('submitted', false)
 
     const [groupName, setGroupName] = useState()
     const [groupSize, setGroupSize] = useState()
