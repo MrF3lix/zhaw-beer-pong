@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }) => (
             <meta property="og:description" content="Am 3.12 ab 19.00 in der T&uuml;rmlibar. Jetzt anmelden, mitmachen und gewinnen! 10.- pro Team inklusive Bier." />
             <meta property="og:title" content="Beer Pong Turnier" />
             <meta property="og:url" content="https://zhaw-beer-pong.ch" />
-            <meta property="og:image" content="https://zhaw-beer-pong.ch/og-image.jpg/og-image.jpg" />
+            <meta property="og:image" content="https://zhaw-beer-pong.ch/og-image.jpg" />
         </Head>
         <Component {...pageProps} />
     </div>
