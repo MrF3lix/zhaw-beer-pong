@@ -29,11 +29,10 @@ h2 {
     font-family: Carter One;
     font-style: normal;
     font-weight: normal;
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 60px;
+    line-height: 64px;
     text-align: center;
     color: #FFFFFF;
-    -webkit-text-stroke: 5px black;
 }
 
 #root {
@@ -59,11 +58,17 @@ main img {
     width: 400px !important;
 }
 
-form {
+.inner {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .input__container {
