@@ -13,8 +13,8 @@ const MyApp = ({ Component, pageProps }) => (
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2524" />
             <meta name="msapplication-TileColor" content="#ffffff" />
             <meta name="theme-color" content="#ffffff" />
-            <meta property="og:image:width" content="279" />
-            <meta property="og:image:height" content="279" />
+            <meta property="og:image:width" content="300" />
+            <meta property="og:image:height" content="300" />
             <meta property="og:description" content="Am 3.12 ab 19.00 in der T&uuml;rmlibar. Jetzt anmelden, mitmachen und gewinnen! 10.- pro Team inklusive Bier." />
             <meta property="og:title" content="Beer Pong Turnier" />
             <meta property="og:url" content="https://zhaw-beer-pong.ch" />
