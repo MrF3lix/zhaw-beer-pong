@@ -1,16 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Permanent+Marker&display=swap');
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: Carter One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 162px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 8px black;
 }

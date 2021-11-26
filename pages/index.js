@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+
+import Logo from '../assets/images/logo.png'
 
 export default function Home() {
     return (
@@ -23,13 +26,8 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <h1>Beer Pong Turnier</h1>
-                <p>Anmeldung öffnet am 30.11 um 12.00 Uhr</p>
+                <Image src={Logo} alt="Beer Pong Turnier" />
             </main>
-
-            <footer className={styles.footer}>
-                
-            </footer>
         </div>
     )
 }
