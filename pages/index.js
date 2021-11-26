@@ -17,7 +17,7 @@ export default function Home() {
                 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2524" />
                 <meta name="msapplication-TileColor" content="#ffffff" />
                 <meta name="theme-color" content="#ffffff" />
-                <meta property="og:image" content="/og-image.jpg"/>
+                <meta property="og:image" content="https://zhaw-beer-pong.vercel.app/og-image.jpg"/>
                 <meta property="og:image:width" content="602"/>
                 <meta property="og:image:height" content="903"/>
                 <meta property="og:description" content="Beer Pong Turnier - 3.12 ab 18.00 in der T&uuml;rmlibar. Jetzt anmelden!"/>
