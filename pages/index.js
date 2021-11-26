@@ -3,26 +3,24 @@ import { useState } from 'react'
 import { useSessionStorage } from 'react-use'
 import Logo from '../assets/images/logo.png'
 
-const API_URL = 'https://sheet.best/api/sheets/a9ab514d-7010-4004-b4eb-fc9c6dc94c0b'
-
 const Home = () => {
     const [hasSubmitted, setHasSubmitted] = useSessionStorage('submitted', false)
 
-    const [groupName, setGroupName] = useState()
+    const [groupName, setGroupName] = useSessionStorage('groupName', "")
     const [groupSize, setGroupSize] = useState()
     const [groupLeader, setGroupLeader] = useState()
 
     const onSubmit = async e => {
         e.preventDefault();
         const response = await fetch(
-            API_URL,
+            '/api/submit',
             {
                 method: 'POST',
                 headers: new Headers({ 'content-type': 'application/json' }),
                 body: JSON.stringify({ groupName, groupSize, groupLeader })
             }
         )
-        if(response.ok) {
+        if (response.ok) {
             setHasSubmitted(true)
         }
     }
