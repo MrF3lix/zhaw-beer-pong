@@ -1,33 +1,38 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-
 import Logo from '../assets/images/logo.png'
 
-export default function Home() {
-    return (
-        <div className={styles.container}>
-            <Head>
-                <title>ZHAW | Beer Pong</title>
-                <meta name="description" content="Beer Pong Turnier - 3.12 ab 18.00 in der Türmlibar." />
-                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-                <link rel="manifest" href="/site.webmanifest" />
-                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2524" />
-                <meta name="msapplication-TileColor" content="#ffffff" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta property="og:image" content="https://zhaw-beer-pong.vercel.app/og-image.jpg"/>
-                <meta property="og:image:width" content="602"/>
-                <meta property="og:image:height" content="903"/>
-                <meta property="og:description" content="Beer Pong Turnier - 3.12 ab 18.00 in der T&uuml;rmlibar. Jetzt anmelden!"/>
-                <meta property="og:title" content="ZHAW | Beer Pong"/>
-                <meta property="og:url" content="https://zhaw-beer-pong.ch"/>
-            </Head>
+const Home = () => {
 
-            <main className={styles.main}>
-                <Image src={Logo} alt="Beer Pong Turnier" />
-            </main>
-        </div>
+    const onSubmit = e => {
+        e.preventDefault();
+    }
+
+    return (
+        <main>
+            <Image src={Logo} alt="Beer Pong Turnier" />
+
+            <form onSubmit={onSubmit}>
+
+                <div className="input__container">
+                    <label>Gruppen Name</label>
+                    <input type="text" id="group.name" placeholder="ZHAW Buds" required/>
+                </div>
+                <div className="input__container">
+                    <label>Anzahl Gruppenmitglieder</label>
+                    <input type="number" id="group.count" min="1" max="3" placeholder="2" required/>
+                </div>
+                <div className="input__container">
+                    <label>Gruppen Verantwortlicher</label>
+                    <input type="text" id="group.responsible" placeholder="Jan" required/>
+                </div>
+                <hr />
+                <div className="input__container">
+                    <button>Anmelden!</button>
+                </div>
+
+            </form>
+        </main>
     )
 }
+
+export default Home

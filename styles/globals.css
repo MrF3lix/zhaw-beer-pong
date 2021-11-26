@@ -18,9 +18,90 @@ h1 {
     font-family: Carter One;
     font-style: normal;
     font-weight: normal;
-    font-size: 200px;
+    font-size: 150px;
     line-height: 162px;
     text-align: center;
     color: #FFFFFF;
     -webkit-text-stroke: 8px black;
+}
+
+h2 {
+    font-family: Carter One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 5px black;
+}
+
+#root {
+    padding: 0 2rem;
+    background-color: #F2D5B9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    min-height: 100vh;
+}
+
+main {
+    flex: 2;
+    background-color: #4397A7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main img {
+    width: 400px !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.input__container {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: Carter One;
+    font-size: 24px;
+    margin: 10px 0 5px;
+}
+
+input {
+    font-family: Carter One;
+    font-size: 20px;
+    padding: 8px;
+    border: 5px solid black;
+    border-radius: 4px;    
+    margin: 5px;
+}
+
+button {
+    font-family: Carter One;
+    font-size: 28px;
+    padding: 8px;
+    border: 5px solid black;
+    border-radius: 4px;    
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    margin: 20px 0;
 }
