@@ -7,13 +7,14 @@ import Flyer from '../assets/images/flyer-no-border.png'
 
 const Home = () => {
     const [hasSubmitted, setHasSubmitted] = useSessionStorage('submitted', false)
-
+    const [isSubmitting, setIsSubmitting] = useState(false)
     const [groupName, setGroupName] = useSessionStorage('groupName', "")
     const [groupSize, setGroupSize] = useState()
     const [groupLeader, setGroupLeader] = useState()
 
     const onSubmit = async e => {
         e.preventDefault();
+        setIsSubmitting(true)
         const response = await fetch(
             '/api/submit',
             {
@@ -25,6 +26,7 @@ const Home = () => {
         if (response.ok) {
             setHasSubmitted(true)
         }
+        setIsSubmitting(false)
     }
 
     const title = "Beer Pong Turnier"
@@ -49,19 +51,19 @@ const Home = () => {
 
                                 <div className="input__container">
                                     <label>Gruppen Name</label>
-                                    <input type="text" id="group.name" onChange={e => setGroupName(e.target.value)} placeholder="ZHAW Buds" required />
+                                    <input disabled={isSubmitting} type="text" id="group.name" onChange={e => setGroupName(e.target.value)} placeholder="ZHAW Buds" required />
                                 </div>
                                 <div className="input__container">
                                     <label>Anzahl Gruppenmitglieder</label>
-                                    <input type="number" id="group.size" onChange={e => setGroupSize(e.target.value)} min="1" max="3" placeholder="2" required />
+                                    <input disabled={isSubmitting} type="number" id="group.size" onChange={e => setGroupSize(e.target.value)} min="1" max="3" placeholder="2" required />
                                 </div>
                                 <div className="input__container">
                                     <label>Gruppen Verantwortlicher</label>
-                                    <input type="text" id="group.leader" onChange={e => setGroupLeader(e.target.value)} placeholder="Jan" required />
+                                    <input disabled={isSubmitting} type="text" id="group.leader" onChange={e => setGroupLeader(e.target.value)} placeholder="Jan" required />
                                 </div>
                                 <hr />
                                 <div className="input__container">
-                                    <button>Anmelden!</button>
+                                    <button disabled={isSubmitting}>Anmelden!</button>
                                 </div>
 
                             </form> :
