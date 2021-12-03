@@ -7,26 +7,26 @@ import Flyer from '../assets/images/flyer-no-border.png'
 
 const Home = () => {
     const [hasSubmitted, setHasSubmitted] = useSessionStorage('submitted', false)
-    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(true)
     const [groupName, setGroupName] = useSessionStorage('groupName', "")
     const [groupSize, setGroupSize] = useState()
     const [groupLeader, setGroupLeader] = useState()
 
     const onSubmit = async e => {
         e.preventDefault();
-        setIsSubmitting(true)
-        const response = await fetch(
-            '/api/submit',
-            {
-                method: 'POST',
-                headers: new Headers({ 'content-type': 'application/json' }),
-                body: JSON.stringify({ groupName, groupSize, groupLeader })
-            }
-        )
-        if (response.ok) {
-            setHasSubmitted(true)
-        }
-        setIsSubmitting(false)
+        // setIsSubmitting(true)
+        // const response = await fetch(
+        //     '/api/submit',
+        //     {
+        //         method: 'POST',
+        //         headers: new Headers({ 'content-type': 'application/json' }),
+        //         body: JSON.stringify({ groupName, groupSize, groupLeader })
+        //     }
+        // )
+        // if (response.ok) {
+        //     setHasSubmitted(true)
+        // }
+        // setIsSubmitting(false)
     }
 
     const title = "Beer Pong Turnier"
@@ -46,6 +46,7 @@ const Home = () => {
                     {/* <Image id="logo" src={Logo} alt="Beer Pong Turnier" /> */}
                     <div className="inner inner-registration">
                         <h2>Anmeldung</h2>
+                        <p>Die Anmeldung ist geschlossen.</p>
                         {!hasSubmitted ?
                             <form onSubmit={onSubmit}>
 
